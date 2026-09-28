@@ -1,0 +1,13 @@
+CUSTOMER SUBSCRIPTION AGREEMENT
+
+This Customer Subscription Agreement is entered into by and between Acme Corp ("Vendor") and Umbrella Health ("Customer"), effective as of November 1, 2024.
+
+1. Subscription. Customer purchases a subscription to the Acme platform as described in the Order Form.
+
+2. Term. The subscription has a term of 24 months.
+
+3. Fees. Customer shall pay subscription fees of $480,000, due within thirty (30) days of receipt of invoice.
+
+4. Liability. Vendor accepts unlimited liability for data breaches caused by its negligence.
+
+5. Governing Law. This Agreement shall be governed by the laws of the State of New York.

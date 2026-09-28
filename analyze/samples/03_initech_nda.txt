@@ -1,0 +1,9 @@
+MUTUAL NON-DISCLOSURE AGREEMENT
+
+This Mutual Non-Disclosure Agreement is made by and between Acme Corp ("Acme") and Initech LLC ("Initech"), effective as of June 1, 2025.
+
+1. Confidential Information. Each party may disclose Confidential Information to the other solely to evaluate a potential business relationship.
+
+2. Term. The obligations under this Agreement continue for a term of two (2) years.
+
+3. Governing Law. This Agreement is governed by the laws of the State of California.

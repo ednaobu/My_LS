@@ -1,0 +1,13 @@
+SUPPLY AGREEMENT
+
+This Supply Agreement is entered into by and between Acme Corp ("Buyer") and Stark Supplies Co. ("Supplier"), effective as of January 1, 2026.
+
+1. Purchase Orders. Buyer may issue purchase orders to Supplier for hardware components. Supplier shall deliver within ten (10) business days.
+
+2. Term. This Agreement shall expire on December 31, 2026.
+
+3. Price. The aggregate price of all purchase orders shall not exceed $75,000. Buyer shall pay within thirty (30) days of receipt of invoice.
+
+4. Limitation of Liability. Supplier's liability shall not exceed the amounts paid under the applicable purchase order.
+
+5. Governing Law. This Agreement shall be governed by the laws of the State of Delaware.

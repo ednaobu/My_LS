@@ -1,0 +1,72 @@
+# Finalize = 7 containers + 6 volumes. Analyze = 1 container + 1 volume.
+# Services find each other by DNS name (http://agreement:8000, ...).
+x-finalize: &finalize
+  build: ./finalize
+  restart: unless-stopped
+  environment: &finalize-env
+    TEMPLATE_SERVICE_URL: http://template:8000
+    AGREEMENT_SERVICE_URL: http://agreement:8000
+    APPROVAL_SERVICE_URL: http://approval:8000
+    REVIEW_SERVICE_URL: http://review:8000
+    COLLABORATION_SERVICE_URL: http://collaboration:8000
+    EVENT_BUS_SERVICE_URL: http://event_bus:8000
+
+services:
+  gateway:
+    <<: *finalize
+    build: { context: ./finalize, args: { SERVICE: gateway } }
+    environment: { <<: *finalize-env, API_KEYS: dev-key }
+    ports: ["8000:8000"]
+
+  event_bus:
+    <<: *finalize
+    build: { context: ./finalize, args: { SERVICE: event_bus } }
+    volumes: [event_bus-data:/data]
+
+  template:
+    <<: *finalize
+    build: { context: ./finalize, args: { SERVICE: template_service } }
+    environment: { <<: *finalize-env, SELF_URL: http://template:8000 }
+    volumes: [template-data:/data]
+
+  agreement:
+    <<: *finalize
+    build: { context: ./finalize, args: { SERVICE: agreement_service } }
+    environment: { <<: *finalize-env, SELF_URL: http://agreement:8000 }
+    volumes: [agreement-data:/data]
+
+  approval:
+    <<: *finalize
+    build: { context: ./finalize, args: { SERVICE: approval_service } }
+    environment: { <<: *finalize-env, SELF_URL: http://approval:8000 }
+    volumes: [approval-data:/data]
+
+  review:
+    <<: *finalize
+    build: { context: ./finalize, args: { SERVICE: review_service } }
+    environment: { <<: *finalize-env, SELF_URL: http://review:8000 }
+    volumes: [review-data:/data]
+
+  collaboration:
+    <<: *finalize
+    build: { context: ./finalize, args: { SERVICE: collaboration_service } }
+    environment: { <<: *finalize-env, SELF_URL: http://collaboration:8000, SLACK_WEBHOOK_URL: "${SLACK_WEBHOOK_URL:-}" }
+    volumes: [collaboration-data:/data]
+
+  analyze:
+    build: ./analyze
+    restart: unless-stopped
+    environment:
+      FINALIZE_EVENT_BUS_URL: http://event_bus:8000
+      ANALYZE_PUBLIC_URL: http://analyze:9000
+    ports: ["9000:9000"]
+    volumes: [analyze-data:/data]
+
+volumes:
+  event_bus-data:
+  template-data:
+  agreement-data:
+  approval-data:
+  review-data:
+  collaboration-data:
+  analyze-data:

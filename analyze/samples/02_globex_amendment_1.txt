@@ -1,0 +1,11 @@
+FIRST AMENDMENT TO MASTER SERVICES AGREEMENT
+
+This First Amendment ("Amendment") is effective as of March 1, 2026 and amends the Master Services Agreement dated January 15, 2025 (the "Agreement") by and between Acme Corp ("Company") and Globex Inc. ("Provider").
+
+1. Fees. The total fees payable under the Agreement are increased to $300,000.
+
+2. Term. The Term of the Agreement is extended to thirty-six (36) months.
+
+3. Section 9 (Governing Law) of the Agreement is hereby deleted and replaced with: "This Agreement shall be governed by the laws of the State of New York."
+
+4. All other terms of the Agreement remain in full force and effect.

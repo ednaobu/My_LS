@@ -1,0 +1,11 @@
+OFFICE LEASE
+
+This Office Lease is entered into by and between Hooli Properties ("Landlord") and Acme Corp ("Tenant"), effective as of April 1, 2023.
+
+1. Premises. Landlord leases to Tenant the premises located at 100 Main Street, Suite 400.
+
+2. Term. The lease term is five (5) years.
+
+3. Rent. The total consideration for the lease term is $1,200,000, payable in equal monthly installments.
+
+4. Governing Law. This Lease shall be governed by the laws of the State of Massachusetts.
